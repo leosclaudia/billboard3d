@@ -21,7 +21,7 @@ export default function Home() {
   const fileRef = useRef(null);
   const selBg = BACKGROUNDS.find(b => b.id === bg);
 
-  const handleFile = (file) => {
+  const handleFile = (file: File) => {
     setPhoto(URL.createObjectURL(file));
     setPhotoFile(file);
     setResult(null);
