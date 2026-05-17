@@ -58,7 +58,7 @@ export default function Home() {
       if (data.error) throw new Error(data.error);
       setResult(data.imageUrl);
       setProgress(100);
-    } catch (e) {
+    } catch (e: any) {
       setError(e.message);
     } finally {
       clearInterval(iv);
