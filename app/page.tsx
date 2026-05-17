@@ -10,13 +10,13 @@ const BACKGROUNDS = [
 ];
 
 export default function Home() {
-  const [photo, setPhoto] = useState(null);
-  const [photoFile, setPhotoFile] = useState(null);
+  const [photo, setPhoto] = useState<string | null>(null);
+  const [photoFile, setPhotoFile] = useState<File | null>(null);
   const [bg, setBg] = useState("nyc");
   const [slogan, setSlogan] = useState("");
   const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState(null);
-  const [error, setError] = useState(null);
+  const [result, setResult] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const [progress, setProgress] = useState(0);
   const fileRef = useRef(null);
   const selBg = BACKGROUNDS.find(b => b.id === bg);
